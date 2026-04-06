@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeux Pierre Feuille Ciseau</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Jeux Pierre Feuille Ciseau</h1>
+    </header>
+    <main>
+        <section id="gauche">
+            <h2 id="nom">Tente ta chance</h2>
+            <div id="btn">
+                <button class="tenter">Pierre</button>
+                <button class="tenter">Feuille</button>
+                <button class="tenter">Ciseau</button>
+            </div>
+            <div id="reponse">
+                <p id="moi">Tu as choisi : </p>
+                <p id="cpt">Compteur : 3</p>
+                <p id="ca">Choix adversaire : </p>
+                <p class="verdict">Verdict : </p>
+            </div>
+        </section>
+        <section id="droit">
+            <button id="rejouer">Rejouer</button>
+            <table>
+                <tbody>
+                    <th></th>
+                    <th>Moi</th>
+                    <th>Adversaire</th>
+                </tbody>
+                <tfoot>
+                    <th colspan="3">Joue sur 3 manche</th>
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <td>Score</td>
+                        <td id="me">0</td>      
+                        <td id="he">0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>
