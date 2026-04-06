@@ -21,6 +21,7 @@ header {
     width: 100%;
     top: 0;
 }
+
 main {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -28,16 +29,64 @@ main {
     color: chocolate;
     min-height: 100vh;
 }
+
 #gauche {
     margin-left: 15px;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
+
 #gauche h2 {
     text-align: center;
 }
-#gauche #btn  .tenter{
+#btn {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 20px ;
+    margin-top: 5px;
+}
+#gauche #btn .tenter {
     background-color: chocolate;
-    width: 190px;
+    width: 150px;
+    padding: 1rem;
+    align-self: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.tenter:hover {
+    transform: scale(1.3);
+    border-radius: 50px;
+}
+#reponse {
+    color: chocolate;
+    margin-top: 90px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+#droit {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+#droit #rejouer {
+    width: 120px;
+    height: 25px;
+    background-color: black;
+    color: chocolate;
+    align-self: center;
+}
+#rejouer:hover {
+    transform: scale(1.3);
+}
+#droit table {
+    background-color: black;
+    padding: 1rem;
+    width: 350px;
+    align-self: center;
 }
