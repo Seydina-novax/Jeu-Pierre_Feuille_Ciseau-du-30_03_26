@@ -47,7 +47,7 @@ main {
     margin-left: 20px ;
     margin-top: 5px;
 }
-#gauche #btn .tenter {
+#gauche .tenter {
     background-color: chocolate;
     width: 150px;
     padding: 1rem;
@@ -66,7 +66,6 @@ main {
     display: flex;
     flex-direction: column;
     gap: 15px;
-
 }
 #droit {
     display: flex;

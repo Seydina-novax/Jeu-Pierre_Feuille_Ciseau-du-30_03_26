@@ -15,24 +15,26 @@
         <section id="gauche">
             <h2 id="nom">Tente ta chance</h2>
             <div id="btn">
-                <button class="tenter">Pierre</button>
-                <button class="tenter">Feuille</button>
-                <button class="tenter">Ciseau</button>
+                <button class="tenter" id="Pierre">Pierre</button>
+                <button class="tenter" id="Feuille">Feuille</button>
+                <button class="tenter" id="Ciseau">Ciseau</button>
             </div>
             <div id="reponse">
-                <p id="moi">Tu as choisi : </p>
-                <p id="cpt">Compteur : 3</p>
+                <p id="moi">Votre choix : </p>
+                <p id="cpl">Compteur : 3</p>
                 <p id="ca">Choix adversaire : </p>
-                <p class="verdict">Verdict : </p>
+                <p id="verdict">Verdict : </p>
             </div>
         </section>
         <section id="droit">
             <button id="rejouer">Rejouer</button>
             <table>
                 <tbody>
-                    <th></th>
-                    <th>Moi</th>
-                    <th>Adversaire</th>
+                    <tr>
+                        <th></th>
+                        <th>Moi</th>
+                        <th>Adversaire</th>
+                    </tr>
                 </tbody>
                 <tfoot>
                     <th colspan="3">Joue sur 3 manche</th>
