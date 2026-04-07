@@ -33,6 +33,11 @@ function game(Utilisateur) {
     let choix_Ordi = Math.floor(Math.random() * 3)
     let choix_ordi_final = choix[choix_Ordi]
 
+    // Desactivé les Boutons
+    Pierre.disabled = true
+    Feuille.disabled = true
+    Ciseau.disabled = true
+
     // Choix Utilisateur
     moi.textContent = "Votre Choix : " + Utilisateur
     let i = 3
@@ -45,11 +50,11 @@ function game(Utilisateur) {
         }
     }, 1000)
     c_a.textContent = "Choix Adversaire : "
-    verdict.textContent="Verdict :"
+    verdict.textContent = "Verdict :"
     setTimeout(() => {
-        c_a.textContent = "Votre Adversaire :" + choix_ordi_final
+        c_a.textContent = "Choix Adversaire :" + choix_ordi_final
         if ((choix_ordi_final === "Pierre" && Utilisateur === "Ciseau") ||
-           ( choix_ordi_final === "Pierre" && Utilisateur === "Ciseau") ||
+            (choix_ordi_final === "Pierre" && Utilisateur === "Ciseau") ||
             (choix_ordi_final === "Feuille" && Utilisateur === "Pierre")
         ) {
             verdict.textContent = "Dommage! Tu as Perdu"
@@ -62,7 +67,30 @@ function game(Utilisateur) {
             user++
             me.textContent = user
         }
+        Pierre.disabled = false
+        Feuille.disabled = false
+        Ciseau.disabled = false
+
+        // fin des trois manches
+        if (user === 3) {
+            verdict.textContent = "🎉 Tu as gagné la partie !"
+
+            Pierre.disabled = true
+            Feuille.disabled = true
+            Ciseau.disabled = true
+
+        } else if (computer === 3) {
+            verdict.textContent = "💀 L'ordinateur a gagné la partie"
+
+            Pierre.disabled = true
+            Feuille.disabled = true
+            Ciseau.disabled = true
+        }
+        if (user === 3 || computer === 3) {
+            return
+        }
     }, 3000)
+    
 }
 
 
@@ -88,4 +116,9 @@ rejouer.addEventListener("click", function () {
     computer = 0
     me.textContent = user
     he.textContent = computer
+
+    // Activer les boutons
+    Pierre.disabled = false
+    Feuille.disabled = false
+    Ciseau.disabled = false
 })
